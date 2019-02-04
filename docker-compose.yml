@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  rahmnathan-portfolio:
+    image: 192.168.1.8:5000/rahmnathan-portfolio:latest
+    ports:
+      - "8080:8080"
