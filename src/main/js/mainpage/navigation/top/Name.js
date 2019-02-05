@@ -3,7 +3,7 @@ import React from 'react';
 const divStyle = {
     textAlign: 'center',
     float: 'left',
-    display: 'inline-block'
+    margin: 'auto'
 };
 
 const nameStyle = {
