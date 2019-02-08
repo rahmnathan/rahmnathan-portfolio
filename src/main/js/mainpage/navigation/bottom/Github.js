@@ -4,7 +4,7 @@ const divStyle = {
     display: 'inline-block',
     verticalAlign: 'middle',
     textAlign: 'center',
-    marginRight: 20,
+    marginRight: 5,
     height: 80,
     bottom: 0
 };

@@ -1,6 +1,8 @@
 import React from 'react';
 import {Github} from "./Github";
 import {LinkedIn} from "./LinkedIn";
+import {VisitMe} from "./VisitMe";
+import {And} from "./And";
 
 const bottomBarStyle = {
     width: '100%',
@@ -16,7 +18,9 @@ const bottomBarStyle = {
 export const BottomBar = () => {
     return (
         <div style={bottomBarStyle}>
+            <VisitMe/>
             <Github/>
+            <And/>
             <LinkedIn/>
         </div>
     );
