@@ -1,17 +1,23 @@
 import React from 'react';
-import {Navigation} from "./Navigation";
+import {Github} from "./Github";
+import {LinkedIn} from "./LinkedIn";
 
 const bottomBarStyle = {
-    float: 'left',
-    height: '20%',
     width: '100%',
-    bottom: 0
+    bottom: 0,
+    textAlign: 'center',
+    height: 150,
+    position: 'fixed',
+    marginLeft: '-50%',
+    left: '50%',
+    display: 'table'
 };
 
 export const BottomBar = () => {
     return (
         <div style={bottomBarStyle}>
-            <Navigation/>
+            <Github/>
+            <LinkedIn/>
         </div>
     );
 };

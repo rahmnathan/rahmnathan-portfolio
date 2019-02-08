@@ -8,13 +8,13 @@ const divStyle = {
 
 const nameStyle = {
     margin: 5,
-    fontSize: 19
+    fontSize: 22
 };
 
 const titleStyle = {
     margin: 5,
     color: 'gray',
-    fontSize: 16
+    fontSize: 18
 };
 
 export const Name = () => {

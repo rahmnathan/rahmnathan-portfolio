@@ -4,7 +4,7 @@ import {Navigation} from "./Navigation";
 
 const topBarStyle = {
     float: 'left',
-    height: '20%',
+    height: '15%',
     width: '100%'
 };
 

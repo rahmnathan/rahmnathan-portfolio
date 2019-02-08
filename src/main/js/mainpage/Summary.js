@@ -2,7 +2,7 @@ import React from 'react';
 
 const summaryStyle = {
     width: '100%',
-    height: 1100,
+    height: '60%',
     float: 'left',
     textAlign: 'center',
     display: 'table'

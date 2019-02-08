@@ -8,7 +8,7 @@ class App extends React.Component {
 
     render(){
         return(
-            <Router>
+            <Router style={{ height: '100%' }}>
                 <MainPage path='/' />
                 <Projects path='/projects'/>
             </Router>

@@ -5,15 +5,17 @@ import {BottomBar} from "./navigation/bottom/BottomBar";
 
 const mainPageStyle = {
     width: '50%',
-    margin: 30,
+    marginTop: 30,
+    marginBottom: 0,
     display: 'inline-block',
     textAlign: 'center',
-    height: '100%'
+    height: '100%',
+    minWidth: 1000
 };
 
 export const MainPage = () => {
     return (
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', height: '95%' }}>
             <div style={mainPageStyle}>
                 <TopBar/>
                 <Summary/>
