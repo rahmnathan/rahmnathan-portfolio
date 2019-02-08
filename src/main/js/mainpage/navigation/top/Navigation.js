@@ -1,6 +1,7 @@
 import React from 'react';
 import {Projects} from "./Projects";
 import {Work} from "./Work";
+import {AboutMe} from "./AboutMe";
 
 const divStyle = {
     textAlign: 'center',
@@ -12,8 +13,9 @@ const divStyle = {
 export const Navigation = () => {
     return (
         <div style={divStyle}>
-            <Projects/>
             <Work/>
+            <Projects/>
+            <AboutMe/>
         </div>
     );
 };
