@@ -12,14 +12,19 @@ const workStyle = {
     minWidth: 1000
 };
 
+const titleStyle = {
+    float: 'left',
+    textSize: 25
+};
+
 export class Work extends React.Component {
 
     render(){
         return(
-            <div style={{ alignText: 'center' }}>
+            <div style={{ textAlign: 'center' }}>
                 <div style={workStyle}>
                     <TopBar/>
-                    <p>My projects.</p>
+                    <p style={titleStyle}>My projects.</p>
                     <Idemia/>
                 </div>
             </div>

@@ -22,7 +22,7 @@ spec:
         app: rahmnathan-portfolio
     spec:
       containers:
-      - image: {{.Values.localmovies.imageRepository}}/rahmnathan-portfolio:latest
+      - image: {{.Values.imageRepository}}/rahmnathan-portfolio:latest
         imagePullPolicy: Always
         name: rahmnathan-portfolio
         resources: {}
@@ -40,8 +40,8 @@ spec:
         configMap:
           name: rahmnathan-portfolio
           items:
-          - key: bootstrap.properties
-            path: bootstrap.properties
+          - key: application.properties
+            path: application.properties
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler

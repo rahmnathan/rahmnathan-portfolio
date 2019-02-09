@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: rahmnathan-portfolio
+data:
+ application.properties: |
+  server.port: 8080
+  logging.pattern.level=%5p %mdc
+  management.endpoints.web.exposure.include=*
+  endpoints.prometheus.enabled: true

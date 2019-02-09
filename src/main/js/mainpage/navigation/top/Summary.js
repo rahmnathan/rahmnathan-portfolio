@@ -7,18 +7,18 @@ const divStyle = {
 };
 
 const projectsStyle = {
-    margin: 5,
-    fontSize: 22,
+    margin: 8,
+    fontSize: 19,
     color: 'black',
     textDecoration: 'none'
 };
 
-export class AboutMe extends React.Component {
+export class Summary extends React.Component {
 
     render() {
         return (
             <div style={divStyle}>
-                <Link to='/' style={projectsStyle}>About Me</Link>
+                <Link to='/' style={projectsStyle}>Summary</Link>
             </div>
         );
     }

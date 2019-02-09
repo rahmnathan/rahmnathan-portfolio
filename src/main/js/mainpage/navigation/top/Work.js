@@ -7,8 +7,8 @@ const divStyle = {
 };
 
 const contactStyle = {
-    margin: 5,
-    fontSize: 22,
+    margin: 8,
+    fontSize: 19,
     color: 'black',
     textDecoration: 'none'
 };

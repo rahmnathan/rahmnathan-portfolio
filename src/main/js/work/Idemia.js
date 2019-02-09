@@ -4,8 +4,7 @@ const idemiaStyle = {
     width: '100%',
     height: '60%',
     float: 'left',
-    textAlign: 'center',
-    display: 'table'
+    textAlign: 'center'
 };
 
 export class Idemia extends React.Component {
