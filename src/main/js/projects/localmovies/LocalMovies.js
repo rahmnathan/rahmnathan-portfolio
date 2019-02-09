@@ -6,14 +6,30 @@ import {Technologies} from "./Technologies";
 const titleStyle = {
     fontSize: 20,
     textAlign: 'center',
-    margin: 30,
-    marginTop: 75
+    margin: 10,
+    marginTop: 70
+};
+
+const descriptionStyle = {
+    fontSize: 16,
+    textAlign: 'center',
+    display: 'inline-block',
+    marginTop: 10,
+    marginBottom: 10,
+    margin: 2,
+    color: 'gray'
 };
 
 export const LocalMovies = () => {
     return (
         <div style={{textAlign: 'center'}}>
             <p style={titleStyle}>LocalMovies</p>
+            <div style={{ display: 'inline-block', width: '100%', textAlign: 'center'}}>
+                <p style={descriptionStyle}>This project is a media server with both web and Android clients. </p>
+                <a  style={descriptionStyle} href="https://localmovies.hopto.org">Log into LocalMovies</a>
+                <p style={descriptionStyle}> or </p>
+                <a  style={descriptionStyle} href="https://github.com/rahmnathan/localmovie-web-service">view the source on Github.</a>
+            </div>
             <Webapp/>
             <AndroidApp/>
             <Technologies/>

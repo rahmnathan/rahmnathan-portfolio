@@ -3,7 +3,8 @@ import React from 'react';
 const webappStyle = {
     textAlign: 'center',
     float: 'right',
-    width: '40%'
+    width: '40%',
+    margin: 25
 };
 
 export const AndroidApp = () => {

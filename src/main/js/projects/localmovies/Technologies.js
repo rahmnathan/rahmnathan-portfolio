@@ -4,7 +4,7 @@ const technologiesStyle = {
     marginTop: 50,
     width: '100%',
     display: 'inline-block',
-    bottom: 30
+    bottom: 0
 };
 
 const titleStyle = {
