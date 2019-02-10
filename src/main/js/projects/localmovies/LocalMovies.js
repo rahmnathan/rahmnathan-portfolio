@@ -26,9 +26,7 @@ export const LocalMovies = () => {
             <p style={titleStyle}>LocalMovies</p>
             <div style={{ display: 'inline-block', width: '100%', textAlign: 'center'}}>
                 <p style={descriptionStyle}>This project is a media server with both web and Android clients. </p>
-                <a  style={descriptionStyle} href="https://localmovies.hopto.org">Log into LocalMovies</a>
-                <p style={descriptionStyle}> or </p>
-                <a  style={descriptionStyle} href="https://github.com/rahmnathan/localmovie-web-service">view the source on Github.</a>
+                <a  style={descriptionStyle} href="https://github.com/rahmnathan/localmovie-web-service">View the source on Github.</a>
             </div>
             <Webapp/>
             <AndroidApp/>
