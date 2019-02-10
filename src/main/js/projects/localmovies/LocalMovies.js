@@ -7,7 +7,7 @@ const titleStyle = {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-    marginTop: 70
+    marginTop: 90
 };
 
 const descriptionStyle = {
@@ -22,9 +22,9 @@ const descriptionStyle = {
 
 export const LocalMovies = () => {
     return (
-        <div style={{textAlign: 'center'}}>
+        <div style={{ textAlign: 'center' }}>
             <p style={titleStyle}>LocalMovies</p>
-            <div style={{ display: 'inline-block', width: '100%', textAlign: 'center'}}>
+            <div style={{ display: 'inline-block', width: '100%', textAlign: 'center' }}>
                 <p style={descriptionStyle}>This project is a media server with both web and Android clients. </p>
                 <a  style={descriptionStyle} href="https://github.com/rahmnathan/localmovie-web-service">View the source on Github.</a>
             </div>
