@@ -10,8 +10,8 @@ const divStyle = {
 
 const imgStyle = {
     textAlign: 'center',
-    height: 40,
-    marginBottom: -50
+    height: 45,
+    marginBottom: -52
 };
 
 export const LinkedIn = () => {

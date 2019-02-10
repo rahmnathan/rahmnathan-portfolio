@@ -4,13 +4,12 @@ import { Summary } from './Summary';
 import {BottomBar} from "./navigation/bottom/BottomBar";
 
 const mainPageStyle = {
-    width: '50%',
-    marginTop: 30,
+    margin: 30,
     marginBottom: 0,
     display: 'inline-block',
     textAlign: 'center',
     height: '100%',
-    minWidth: 1000
+    maxWidth: 1300
 };
 
 export const MainPage = () => {
