@@ -4,7 +4,8 @@ const webappStyle = {
     textAlign: 'center',
     float: 'left',
     width: '50%',
-    margin: 25
+    margin: 25,
+    marginRight: 0
 };
 
 export const Webapp = () => {
