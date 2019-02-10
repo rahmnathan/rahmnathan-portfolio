@@ -19,4 +19,4 @@ spec:
     tls:
         - hosts:
               - nathanrahm.ddns.net
-          secretName: localmovies-tls
+          secretName: rahmnathan-portfolio-tls
