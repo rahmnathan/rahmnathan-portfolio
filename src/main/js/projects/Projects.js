@@ -1,6 +1,7 @@
 import React from 'react';
 import {LocalMovies} from "./localmovies/LocalMovies";
 import {TopBar} from "../mainpage/navigation/top/TopBar";
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const projectsStyle = {
     margin: 30,
@@ -16,7 +17,14 @@ export const Projects = () => {
         <div style={{textAlign: 'center'}}>
             <div style={projectsStyle}>
                 <TopBar/>
-                <LocalMovies/>
+                <ReactCSSTransitionGroup
+                    transitionName="fadein"
+                    transitionAppear={true}
+                    transitionAppearTimeout={500}
+                    transitionEnter={true}
+                    transitionLeave={true}>
+                    <LocalMovies/>
+                </ReactCSSTransitionGroup>
             </div>
         </div>
     );

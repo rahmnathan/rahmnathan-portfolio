@@ -2,6 +2,7 @@ import React from 'react';
 import { TopBar } from './navigation/top/TopBar';
 import { Summary } from './Summary';
 import {BottomBar} from "./navigation/bottom/BottomBar";
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const mainPageStyle = {
     margin: 30,
@@ -14,11 +15,18 @@ const mainPageStyle = {
 
 export const MainPage = () => {
     return (
-        <div style={{ textAlign: 'center', height: '95%' }}>
+        <div style={{textAlign: 'center', height: '95%'}}>
             <div style={mainPageStyle}>
                 <TopBar/>
-                <Summary/>
-                <BottomBar/>
+                <ReactCSSTransitionGroup
+                    transitionName="fadein"
+                    transitionAppear={true}
+                    transitionAppearTimeout={500}
+                    transitionEnter={true}
+                    transitionLeave={true}>
+                    <Summary/>
+                    <BottomBar/>
+                </ReactCSSTransitionGroup>
             </div>
         </div>
     );
