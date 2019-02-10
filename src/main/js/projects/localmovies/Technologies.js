@@ -1,7 +1,7 @@
 import React from 'react';
 
 const technologiesStyle = {
-    marginTop: 50,
+    marginTop: 100,
     width: '100%',
     display: 'inline-block',
     bottom: 0
@@ -11,7 +11,8 @@ const titleStyle = {
     fontSize: 20,
     textAlign: 'center',
     marginBottom: 30,
-    width: '100%'
+    width: '100%',
+    textDecoration: 'underline'
 };
 
 const imgStyle = {
@@ -23,7 +24,7 @@ const imgStyle = {
 export const Technologies = () => {
     return (
         <div style={technologiesStyle}>
-            <p style={titleStyle}>Technologies</p>
+            <p style={titleStyle}>Technologies used to create, deploy, and monitor this system.</p>
             <img style={imgStyle} src="apache-camel.png" alt="Sorry!"/>
             <img style={imgStyle} src="docker-logo.png" alt="Sorry!"/>
             <img style={imgStyle} src="grafana-logo.png" alt="Sorry!"/>

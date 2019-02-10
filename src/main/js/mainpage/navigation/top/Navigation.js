@@ -1,6 +1,5 @@
 import React from 'react';
 import {Projects} from "./Projects";
-import {Work} from "./Work";
 import {Summary} from "./Summary";
 
 const divStyle = {
@@ -13,7 +12,7 @@ const divStyle = {
 export const Navigation = () => {
     return (
         <div style={divStyle}>
-            <Work/>
+            {/*<Work/>*/}
             <Projects/>
             <Summary/>
         </div>

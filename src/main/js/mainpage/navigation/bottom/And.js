@@ -14,13 +14,11 @@ const paragraphStyle = {
     fontSize: 20
 };
 
-export class And extends React.Component {
+export const And = () => {
+    return (
+        <div style={divStyle}>
+            <p style={paragraphStyle}>and</p>
+        </div>
+    );
+};
 
-    render() {
-        return (
-            <div style={divStyle}>
-                <p style={paragraphStyle}>and</p>
-            </div>
-        );
-    }
-}

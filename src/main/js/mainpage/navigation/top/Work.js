@@ -13,13 +13,10 @@ const contactStyle = {
     textDecoration: 'none'
 };
 
-export class Work extends React.Component {
-
-    render() {
-        return (
-            <div style={divStyle}>
-                <Link to='/work' style={contactStyle}>Work</Link>
-            </div>
-        );
-    }
-}
+export const Work = () => {
+    return (
+        <div style={divStyle}>
+            <Link to='/work' style={contactStyle}>Work</Link>
+        </div>
+    );
+};

@@ -13,13 +13,10 @@ const projectsStyle = {
     textDecoration: 'none'
 };
 
-export class Summary extends React.Component {
-
-    render() {
-        return (
-            <div style={divStyle}>
-                <Link to='/' style={projectsStyle}>Summary</Link>
-            </div>
-        );
-    }
-}
+export const Summary = () => {
+    return (
+        <div style={divStyle}>
+            <Link to='/' style={projectsStyle}>Summary</Link>
+        </div>
+    );
+};

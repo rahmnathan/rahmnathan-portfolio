@@ -17,8 +17,8 @@ const summaryTextStyle = {
 export const Summary = () => {
     return (
         <div style={summaryStyle}>
-            <p style={summaryTextStyle}>Hello, I'm a Software Engineer with a passion for creating performant, maintainable,
-                scalable applications and great user experiences.</p>
+            <p style={summaryTextStyle}>Hello, I'm a Software Engineer with a passion for creating maintainable
+                business applications and great user experiences.</p>
         </div>
     );
 };

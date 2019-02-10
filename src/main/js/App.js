@@ -12,7 +12,7 @@ class App extends React.Component {
             <Router style={{ height: '100%' }}>
                 <MainPage path='/' />
                 <Projects path='/projects'/>
-                <Work path='/work'/>
+                {/*<Work path='/work'/>*/}
             </Router>
         );
     }

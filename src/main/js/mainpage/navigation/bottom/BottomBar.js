@@ -2,13 +2,13 @@ import React from 'react';
 import {Github} from "./Github";
 import {LinkedIn} from "./LinkedIn";
 import {VisitMe} from "./VisitMe";
-import {And} from "./And";
+import {ProtonMail} from "./ProtonMail";
 
 const bottomBarStyle = {
     width: '100%',
     bottom: 0,
     textAlign: 'center',
-    height: 150,
+    height: 130,
     position: 'fixed',
     marginLeft: '-50%',
     left: '50%',
@@ -19,9 +19,11 @@ export const BottomBar = () => {
     return (
         <div style={bottomBarStyle}>
             <VisitMe/>
-            <Github/>
-            <And/>
-            <LinkedIn/>
+            <div style={{ width: '100%' }}>
+                <Github/>
+                <LinkedIn/>
+                <ProtonMail/>
+            </div>
         </div>
     );
 };
