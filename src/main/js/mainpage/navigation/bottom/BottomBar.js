@@ -6,7 +6,7 @@ import {ProtonMail} from "./ProtonMail";
 
 const bottomBarStyle = {
     width: '100%',
-    bottom: 0,
+    bottom: 25,
     textAlign: 'center',
     height: 130,
     position: 'fixed',

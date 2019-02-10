@@ -3,12 +3,12 @@ import React from 'react';
 const divStyle = {
     display: 'inline-block',
     textAlign: 'center',
-    height: 90
+    height: 70
 };
 
 const imgStyle = {
     textAlign: 'center',
-    height: 90,
+    height: 70,
     marginBottom: -65
 };
 

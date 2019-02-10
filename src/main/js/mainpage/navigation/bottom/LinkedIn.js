@@ -5,12 +5,12 @@ const divStyle = {
     marginLeft: 20,
     marginRight: 20,
     textAlign: 'center',
-    height: 60
+    height: 40
 };
 
 const imgStyle = {
     textAlign: 'center',
-    height: 60,
+    height: 40,
     marginBottom: -50
 };
 

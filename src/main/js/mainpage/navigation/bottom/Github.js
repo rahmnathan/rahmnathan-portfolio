@@ -4,12 +4,12 @@ const divStyle = {
     display: 'inline-block',
     textAlign: 'center',
     marginRight: 10,
-    height: 80
+    height: 60
 };
 
 const imgStyle = {
     textAlign: 'center',
-    height: 80,
+    height: 60,
     marginBottom: -60
 };
 
