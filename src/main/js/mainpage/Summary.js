@@ -8,16 +8,28 @@ const summaryStyle = {
     display: 'table'
 };
 
-const summaryTextStyle = {
+const summaryTextWrapperStyle = {
     display: 'table-cell',
     verticalAlign: 'middle',
-    fontSize: 25
+    width: '100%',
+    textAlign: 'center'
+};
+
+const summaryTextStyle = {
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    width: '100%',
+    fontSize: 25,
+    margin: 5
 };
 
 export const Summary = () => {
     return (
         <div style={summaryStyle}>
-            <p style={summaryTextStyle}>Hello, I'm a Software Engineer with a passion for creating efficient, scalable, maintainable applications.</p>
+            <div style={summaryTextWrapperStyle}>
+                <p style={summaryTextStyle}>Hello, I'm a Software Engineer in Minneapolis, MN.</p>
+                <p style={summaryTextStyle}>I design, build, deploy and monitor systems to service business needs.</p>
+            </div>
         </div>
     );
 };
