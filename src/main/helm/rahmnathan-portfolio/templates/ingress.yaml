@@ -9,7 +9,7 @@ metadata:
     name: portfolio-ingress
 spec:
     rules:
-        - host: nathanrahm.com
+        - host: nathanrahm.ddns.net
           http:
               paths:
                   - backend:
@@ -18,5 +18,5 @@ spec:
                     path: /
     tls:
         - hosts:
-              - nathanrahm.com
+              - nathanrahm.ddns.net
           secretName: localmovies-tls
