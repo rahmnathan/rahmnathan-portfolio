@@ -6,7 +6,7 @@ const divStyle = {
     textAlign: 'center',
     float: 'right',
     margin: 'auto',
-    marginTop: 10
+    marginTop: 20
 };
 
 export const Navigation = () => {
