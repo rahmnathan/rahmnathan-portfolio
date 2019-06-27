@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11:jdk-11.0.2.9-alpine-slim
+FROM adoptopenjdk/openjdk11:alpine-jre
 
 RUN mkdir /opt/rahmnathan-portfolio && mkdir /opt/rahmnathan-portfolio/config
 
