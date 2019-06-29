@@ -13,7 +13,6 @@ const titleStyle = {
 const descriptionStyle = {
     fontSize: 16,
     textAlign: 'center',
-    // display: 'inline-block',
     marginTop: 10,
     marginBottom: 10,
     margin: 2,
@@ -26,7 +25,7 @@ export const LocalMovies = () => {
             <p style={titleStyle}>LocalMovies</p>
             <div style={{ display: 'inline-block', width: '100%', textAlign: 'center' }}>
                 <p style={descriptionStyle}>This project is a media server with both web and Android clients.</p>
-                <p><a  style={descriptionStyle} href="https://localmovies-grafana.hopto.org">View live monitoring with Grafana.</a></p>
+                <p><a  style={descriptionStyle} href="https://nathanrahm-grafana.ddns.net">View live monitoring with Grafana.</a></p>
                 <p><a  style={descriptionStyle} href="https://github.com/rahmnathan/localmovie-web-service">View the source on Github. </a></p>
             </div>
             <Webapp/>
