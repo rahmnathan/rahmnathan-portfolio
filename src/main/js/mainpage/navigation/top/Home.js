@@ -18,7 +18,8 @@ const hoveredSummaryStyle = {
     fontSize: 19,
     color: 'gray'
 };
-export class Summary extends React.Component {
+
+export class Home extends React.Component {
 
     constructor(props){
         super(props);
@@ -39,14 +40,14 @@ export class Summary extends React.Component {
         if(this.state.hovered !== null && this.state.hovered === true){
             return (
                 <div onMouseEnter={this.addHover} onMouseLeave={this.removeHover} style={divStyle}>
-                    <Link to='/' style={hoveredSummaryStyle}>Summary</Link>
+                    <Link to='/' style={hoveredSummaryStyle}>Home</Link>
                 </div>
             );
         }
 
         return (
             <div onMouseEnter={this.addHover} onMouseLeave={this.removeHover} style={divStyle}>
-                <Link to='/' style={summaryStyle}>Summary</Link>
+                <Link to='/' style={summaryStyle}>Home</Link>
             </div>
         );
     }

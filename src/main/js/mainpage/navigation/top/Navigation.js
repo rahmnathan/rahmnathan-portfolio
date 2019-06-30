@@ -1,6 +1,6 @@
 import React from 'react';
 import {Projects} from "./Projects";
-import {Summary} from "./Summary";
+import {Home} from "./Home";
 
 const divStyle = {
     textAlign: 'center',
@@ -14,7 +14,7 @@ export const Navigation = () => {
         <div style={divStyle}>
             {/*<Work/>*/}
             <Projects/>
-            <Summary/>
+            <Home/>
         </div>
     );
 };
