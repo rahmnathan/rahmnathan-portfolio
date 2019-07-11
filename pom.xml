@@ -44,7 +44,7 @@
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>1.4.10</version>
                 <configuration>
-                    <repository>192.168.1.8:5000/rahmnathan-portfolio</repository>
+                    <repository>rahmnathan/rahmnathan-portfolio</repository>
                     <tag>latest</tag>
                     <buildArgs>
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
