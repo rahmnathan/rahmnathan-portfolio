@@ -45,7 +45,7 @@ node {
         withCredentials([
                 file(credentialsId: 'Kubeconfig', variable: 'KUBE_CONFIG'),
         ]) {
-            sh 'helm upgrade --install rahmnathan-portfolio ./target/classes/rahmnathan-portfolio/ --namespace portfolio --kubeconfig $KUBE_CONFIG'
+            sh 'helm upgrade --install -n portfolio rahmnathan-portfolio ./target/classes/rahmnathan-portfolio/ --kubeconfig $KUBE_CONFIG'
         }
     }
 }
