@@ -25,7 +25,7 @@ export const LocalMovies = () => {
             <p style={titleStyle}>LocalMovies</p>
             <div style={{ display: 'inline-block', width: '100%', textAlign: 'center' }}>
                 <p style={descriptionStyle}>This project is a media server with both web and Android clients.</p>
-                <p><a  style={descriptionStyle} href="https://grafana.nathanrahm.com/d/4XAtDYIGk/localmovies?orgId=1">View live monitoring with Grafana.</a></p>
+                <p><a  style={descriptionStyle} href="https://grafana.nathanrahm.com/d/Yb7_MHFMk/localmovies">View live monitoring with Grafana.</a></p>
                 <p><a  style={descriptionStyle} href="https://github.com/rahmnathan/localmovie-media-manager">View the source on Github. </a></p>
             </div>
             <Webapp/>
