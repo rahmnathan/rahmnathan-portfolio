@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
     annotations:
@@ -8,15 +8,18 @@ metadata:
         kubernetes.io/tls-acme: "true"
     name: portfolio-ingress
 spec:
-    rules:
-        - host: nathanrahm.com
-          http:
-              paths:
-                  - backend:
-                        serviceName: rahmnathan-portfolio
-                        servicePort: 8080
-                    path: /
-    tls:
+  rules:
+    - host: nathanrahm.com
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: rahmnathan-portfolio
+                port:
+                  name: http
+  tls:
         - hosts:
               - nathanrahm.com
           secretName: rahmnathan-portfolio-tls
