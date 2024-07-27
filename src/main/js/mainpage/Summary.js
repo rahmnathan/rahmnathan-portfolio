@@ -27,7 +27,7 @@ export const Summary = () => {
     return (
         <div style={summaryStyle}>
             <div style={summaryTextWrapperStyle}>
-                <p style={summaryTextStyle}>Hello, I'm a Software Engineer in Minneapolis, MN.</p>
+                <p style={summaryTextStyle}>Hello, I'm a Software Engineer in Bellevue, WA.</p>
                 <p style={summaryTextStyle}>I design, build, deploy and monitor systems that provide high quality user experiences.</p>
             </div>
         </div>
