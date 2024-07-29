@@ -1,6 +1,6 @@
 FROM eclipse-temurin:21-jre
 
-RUN groupadd portfolio && useradd -S portfolio -g portfolio && mkdir -p /opt/rahmnathan-portfolio/config
+RUN groupadd portfolio && useradd portfolio -g portfolio && mkdir -p /opt/rahmnathan-portfolio/config
 
 ARG JAR_FILE
 ADD target/$JAR_FILE /opt/rahmnathan-portfolio/rahmnathan-portfolio.jar
