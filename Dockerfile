@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11:alpine-jre
+FROM eclipse-temurin:21-jre
 
 RUN addgroup -S portfolio && adduser -S portfolio -G portfolio && mkdir -p /opt/rahmnathan-portfolio/config
 
