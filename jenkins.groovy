@@ -3,7 +3,7 @@ node {
     def jdk
     stage('Setup') {
         mvnHome = tool 'Maven'
-        jdk = tool name: 'Java 19'
+        jdk = tool name: 'Java 21'
         env.JAVA_HOME = "${jdk}"
     }
     stage('Checkout') {
