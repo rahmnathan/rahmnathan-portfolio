@@ -59,27 +59,31 @@ spec:
                 }
             }
         }
-        stage('Package') {
-            steps {
-                sh "mvn clean install -DskipTests"
-            }
-        }
         stage('Test') {
             steps {
-                sh "mvn test"
+                sh 'mvn test'
             }
         }
-        stage('Docker Build') {
+        stage('Package & Deploy Jar to Artifactory') {
             steps {
-                sh "mvn dockerfile:build"
+                script {
+                    server = Artifactory.server 'Artifactory'
+                    rtMaven = Artifactory.newMavenBuild()
+                    rtMaven.tool = 'Maven'
+                    rtMaven.deployer releaseRepo: 'rahmnathan-services', snapshotRepo: 'rahmnathan-services', server: server
+
+                    buildInfo = Artifactory.newBuildInfo()
+
+                    rtMaven.run pom: 'pom.xml', goals: 'install -DskipTests', buildInfo: buildInfo
+                }
             }
         }
-        stage('Docker Push') {
+        stage('Docker Build/Push') {
             environment {
                 DOCKERHUB = credentials('Dockerhub')
             }
             steps {
-                sh "mvn dockerfile:push -Ddockerfile.username=$DOCKERHUB_USR -Ddockerfile.password='$DOCKERHUB_PSW'"
+                sh "mvn spring-boot:build-image -DskipTests -Ddocker.password='$DOCKERHUB_PSW' -Ddocker.publish=true"
             }
         }
         stage('Deploy to Kubernetes') {
@@ -87,8 +91,16 @@ spec:
                 KUBE_CONFIG = credentials('Kubeconfig')
             }
             steps {
-                sh "helm upgrade --install -n portfolio rahmnathan-portfolio ./target/classes/rahmnathan-portfolio/ --kubeconfig $KUBE_CONFIG"
-                sh "kubectl -n portfolio rollout status deployment rahmnathan-portfolio --timeout=10m --kubeconfig $KUBE_CONFIG"
+                sh 'helm upgrade --install -n portfolio rahmnathan-portfolio ./target/classes/rahmnathan-portfolio/ --kubeconfig $KUBE_CONFIG'
+            }
+        }
+        stage('Wait for Deployment') {
+            steps {
+                script {
+                    withCredentials([file(credentialsId: 'Kubeconfig', variable: 'KUBE_CONFIG')]) {
+                        sh 'kubectl -n portfolio rollout status deployment rahmnathan-portfolio --timeout=10m --kubeconfig $KUBE_CONFIG'
+                    }
+                }
             }
         }
     }
