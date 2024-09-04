@@ -40,7 +40,7 @@ spec:
             steps {
                 script {
                     PROJECT_VERSION = sh(
-                            script: "'${mvnHome}/bin/mvn' help:evaluate -Dexpression=project.version -q -DforceStdout",
+                            script: "mvn help:evaluate -Dexpression=project.version -q -DforceStdout",
                             returnStdout: true
                     ).trim()
                     env.NEW_VERSION = "${PROJECT_VERSION}.${BUILD_NUMBER}"
