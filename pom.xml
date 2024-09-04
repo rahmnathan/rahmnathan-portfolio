@@ -17,6 +17,9 @@
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
+
+        <docker.publish>false</docker.publish>
+        <docker.password/>
     </properties>
 
     <scm>
@@ -45,7 +48,17 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <executable>true</executable>
+                    <image>
+                        <name>rahmnathan/rahmnathan-portfolio:${project.version}</name>
+                        <publish>${docker.publish}</publish>
+                    </image>
+                    <docker>
+                        <publishRegistry>
+                            <username>rahmnathan</username>
+                            <password>${docker.password}</password>
+                            <url>https://docker.io</url>
+                        </publishRegistry>
+                    </docker>
                 </configuration>
             </plugin>
             <plugin>
