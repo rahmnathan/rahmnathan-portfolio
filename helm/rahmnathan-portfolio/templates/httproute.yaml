@@ -1,4 +1,5 @@
-# Gateway API HTTPRoute - replaces ingress.yml after migration to Envoy Gateway
+# Gateway API HTTPRoute for Portfolio
+# Replaces ingress.yml
 
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
@@ -11,10 +12,14 @@ spec:
   hostnames:
     - nathanrahm.com
   rules:
+    # Block /actuator externally (no backendRefs = 500)
+    # Internal Prometheus scraping goes direct to pod IP, bypassing gateway
     - matches:
         - path:
             type: PathPrefix
-            value: /
-      backendRefs:
+            value: /actuator
+
+    # Default route
+    - backendRefs:
         - name: rahmnathan-portfolio
           port: 8080
